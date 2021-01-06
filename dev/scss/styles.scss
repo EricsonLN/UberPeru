@@ -1,1 +1,8 @@
+@import "config/colors";
+@import "config/fonts";
+@import "mixins/breakpoints.scss";
 @import "base/base";
+@import "base/normalize.scss";
+
+// bloques
+@import "blocks/header"

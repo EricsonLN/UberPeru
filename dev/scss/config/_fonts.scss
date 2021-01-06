@@ -1,0 +1,18 @@
+// @font-face{
+//     src: url(../assets/font/Netflix-Sans-Light.otf);
+//     font-family: "netflix-light";
+// }
+// @font-face{
+//     src: url(../assets/font/Netflix-Sans-Medium.otf);
+//     font-family: "netflix-medium";
+// }
+// @font-face{
+//     src: url(../assets/font/valencia-serial-bold.ttf);
+//     font-family: "valencia-blod";
+// }
+:root{
+    --main-font: UberMove, UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+   
+}
+
+$main-font:var(--main-font);
