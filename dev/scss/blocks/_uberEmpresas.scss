@@ -1,0 +1,27 @@
+.main-uberEmpresas{
+    display: flex;
+    &__items{
+        & figure{
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            & img{
+                max-width: 100%;
+            }
+        }
+        & h1{
+            font-family: $main-font;
+            color: rgb(51, 51, 51);
+            font-weight: 400;
+            font-size: 2.5rem;
+        }
+        & p{
+            font-weight: 300;
+            padding-right: 1rem;
+            letter-spacing: 1px;
+        }
+        & a{
+            font-size: 1.7rem;
+        }
+    }
+}

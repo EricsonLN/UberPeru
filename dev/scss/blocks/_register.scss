@@ -1,0 +1,16 @@
+.main-register{
+    display: flex;justify-content: space-between;
+    font-family: $main-font;
+    
+    &__items{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-grow: 2;
+        margin: 1.5rem;
+        cursor: pointer;
+        & h1{
+            font-size: 3rem;
+        }
+    }
+}

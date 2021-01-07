@@ -1,0 +1,12 @@
+.main-nosotros{
+    padding-top: 5rem;
+    display: flex;
+    font-family: $main-font;
+    &__items{
+        & a{
+            display: inline-block;
+            margin-top: 2rem;
+            font-size: 1.6rem;
+        }
+    }
+}
