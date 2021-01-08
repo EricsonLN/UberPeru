@@ -1,10 +1,40 @@
 .main-uberEmpresas{
     display: flex;
+    @include tablet{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    @include mobile{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     &__items{
+        @include tablet{
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+        }
+        @include mobile{
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+        }
         & figure{
             width: 100%;
             padding: 0;
             margin: 0;
+            @include tablet{
+                display: flex;
+                justify-content: center;
+            }
+            @include mobile{
+                display: flex;
+                justify-content: center;
+            }
+            
+            
             & img{
                 max-width: 100%;
             }
@@ -19,6 +49,12 @@
             font-weight: 300;
             padding-right: 1rem;
             letter-spacing: 1px;
+            @include tablet{
+                text-align: center;
+            }
+            @include mobile{
+                text-align: center;
+            }
         }
         & a{
             font-size: 1.7rem;

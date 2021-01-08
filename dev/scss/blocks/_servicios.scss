@@ -4,16 +4,36 @@
     
     & figure{
         width: 100%;
+        height: 80rem;
+        @include tablet{
+            height: 85rem;
+        }
+        @include mobile{
+            height: 130rem;
+        }
         margin: 0;
+        position: relative;
         & img{
             width: 100%;
+            position: absolute;
+            top: 0;
+            height: 100%;
+            @include tablet{
+                height: 85rem;
+                object-fit: cover;
+            }
+            @include mobile{
+                height: 130rem;
+            }
         }
     }
 }
 .main-menuService{
     position: absolute;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
     top: 5.5rem;
     left: 0;
     right: 0;
@@ -21,28 +41,53 @@
     width: 90%;
     padding: 0;
     background-color: $color-white;
-    
+    &__item{
+        @include tablet{
+        // width: 100%;
+        }
+        @include mobile{
+            width: 50%;
+            
+        }
+    }
     &__link{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        justify-items: center;
         text-align: center;
         padding: 1.3rem;
+        @include tablet{
+        margin: 1rem;
+        }
         position: relative;
+        
+        cursor: pointer;
         &--info{
             position: absolute;
             background-color: $color-white;
             // border: 1px solid black;
             padding: 2rem;
-            top: 11.7rem;
+            top: 10.1rem;
+            
             left: 0;
             width: 50rem;
-            box-shadow: rgba(0,0,0,0.16) 0px 4px 16px;
+            // box-shadow: rgba(0,0,0,0.16) 0px 4px 16px;
             text-align: start;
             @include descktop{
                 top: 10.1rem;
             }
+            @include tablet{
+                top: 23rem;
+                left: -1rem;
+            }
+            @include mobile{
+                top: 49rem;
+                left: -1rem;
+                width: 29.8rem;
+            }
+            
             & h1{
                 font-size: 5rem;
                 font-weight: 400;
@@ -89,3 +134,24 @@
             }
         }
 
+.hiddenimg{
+ 
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.8s;
+  transition-timing-function: linear;
+  
+}
+.visibilityimg{
+ 
+    opacity: 100;
+}
+.hidden{
+ 
+    display: none;
+    
+  }
+  .visibility{
+   
+      display: block;
+  }

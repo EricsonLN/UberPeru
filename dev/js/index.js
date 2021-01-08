@@ -51,44 +51,328 @@ if(closeInfoCovid){
     } )
 }
 
+// evento on click
+const obtenRecompensa = document.getElementById('obtenRecompensa');
+const viaje = document.getElementById('viaje');
+const pideComida = document.getElementById('pideComida');
+const transporta = document.getElementById('transporta');
+const empresas = document.getElementById('empresas');
+const transit = document.getElementById('transit');
+const Bicicletas = document.getElementById('Bicicletas');
+const uberElevate = document.getElementById('uberElevate');
+// function
+const obtenRecompensaInfo = document.getElementById('obtenRecompensaInfo');
+const obtenViajeInfo = document.getElementById('obtenViajeInfo');
+const obtenComidaInfo = document.getElementById('obtenComidaInfo');
+const obtenTransporteInfo = document.getElementById('obtenTransporteInfo');
+const obtenEmpresaInfo = document.getElementById('obtenEmpresaInfo');
+const obtenTransitInfo = document.getElementById('obtenTransitInfo');
+const obtenBicicletasInfo = document.getElementById('obtenBicicletasInfo');
+const obtenVueloInfo = document.getElementById('obtenVueloInfo');
+// funciones de img
+const imgObtenRecompensaInfo = document.getElementById('imgObtenRecompensaInfo');
+const imgObtenViajeInfo = document.getElementById('imgObtenViajeInfo');
+const imgObtenComidaInfo = document.getElementById('imgObtenComidaInfo');
+const imgObtenTransporteInfo = document.getElementById('imgObtenTransporteInfo');
+const imgObtenEmpresaInfo = document.getElementById('imgObtenEmpresaInfo');
+const imgObtenTransitInfo = document.getElementById('imgObtenTransitInfo');
+const imgObtenBicicletasInfo = document.getElementById('imgObtenBicicletasInfo');
+const imgObtenVueloInfo = document.getElementById('imgObtenVueloInfo');
 
-$('#modeloCambiar img').hide();
-$('#modeloCambiar img:first').show();
-$("select[name=style]").change(function(){
-  estilo = $(this).val();
-  $('.dNone').removeAttr('selected'); 
-  $('.dNone').hide();
-  $('.'+estilo).show();
-  $('.'+estilo+':first').attr('selected','selected');
-  estilo = $('.'+estilo+':first').val();
-  $('#modeloCambiar img').hide();
-  $('.'+estilo).fadeToggle(1200);
-  
-});
+if(obtenRecompensa){
+  obtenRecompensa.addEventListener('click',(e)=>{
+    // obtenRecompensaInfo.classList.add('hidden');
+    obtenViajeInfo.classList.add('hidden');
+    obtenComidaInfo.classList.add('hidden');
+    obtenTransporteInfo.classList.add('hidden');
+    obtenEmpresaInfo.classList.add('hidden');
+    obtenTransitInfo.classList.add('hidden');
+    obtenBicicletasInfo.classList.add('hidden');
+    obtenVueloInfo.classList.add('hidden');
+    
+    imgObtenViajeInfo.classList.add('hiddenimg');
+    imgObtenComidaInfo.classList.add('hiddenimg');
+    imgObtenTransporteInfo.classList.add('hiddenimg');
+    imgObtenEmpresaInfo.classList.add('hiddenimg');
+    imgObtenTransitInfo.classList.add('hiddenimg');
+    imgObtenBicicletasInfo.classList.add('hiddenimg');
+    imgObtenVueloInfo.classList.add('hiddenimg');
 
-$("select[name=model]").change(function(){
-  estilo = $(this).val();
-  $('#modeloCambiar img').hide();
-  $('.'+estilo).fadeToggle(1200);
-});
+    obtenViajeInfo.classList.remove('visibility');
+    obtenComidaInfo.classList.remove('visibility');
+    obtenTransporteInfo.classList.remove('visibility');
+    obtenEmpresaInfo.classList.remove('visibility');
+    obtenTransitInfo.classList.remove('visibility');
+    obtenBicicletasInfo.classList.remove('visibility');
+    obtenVueloInfo.classList.remove('visibility');
 
-$("#modelo option").css("display","none");
-$('#vehiculo').on('change', function() {
-  $("#modelo option").css("display","none");
-  $("."+this.value+"").css("display", "block");
-  $("#modelo").prop('selectedIndex', 0);
-});
+    imgObtenViajeInfo.classList.remove('visibilityimg');
+    imgObtenComidaInfo.classList.remove('visibilityimg');
+    imgObtenTransporteInfo.classList.remove('visibilityimg');
+    imgObtenEmpresaInfo.classList.remove('visibilityimg');
+    imgObtenTransitInfo.classList.remove('visibilityimg');
+    imgObtenBicicletasInfo.classList.remove('visibilityimg');
+    imgObtenVueloInfo.classList.remove('visibilityimg');
 
 
-var btn = $(".btn-habilitar");
-btn.attr('disabled', 'disabled');
-btn.css('background', 'rgb(34 34 34 / 0.3)');
-$('#txtterminos1').on('click', function() {
-  if ($(this).is(':checked')) {
-    btn.removeAttr('disabled');
-    btn.css('background', '#4184d2');
-  } else {
-    btn.attr('disabled', 'disabled');
-    btn.css('background', 'rgb(34 34 34 / 0.3)');
-  }
-});
+    obtenRecompensaInfo.classList.add('visibility');
+    imgObtenRecompensaInfo.classList.add('visibilityimg');
+  })
+}
+if(viaje){
+  viaje.addEventListener('click',(e)=>{
+    obtenRecompensaInfo.classList.add('hidden');
+    obtenTransporteInfo.classList.add('hidden');
+    obtenComidaInfo.classList.add('hidden');
+    obtenEmpresaInfo.classList.add('hidden');
+    obtenTransitInfo.classList.add('hidden');
+    obtenBicicletasInfo.classList.add('hidden');
+    obtenVueloInfo.classList.add('hidden');
+
+    imgObtenRecompensaInfo.classList.add('hiddenimg');
+    imgObtenTransporteInfo.classList.add('hiddenimg');
+    imgObtenComidaInfo.classList.add('hiddenimg');
+    imgObtenEmpresaInfo.classList.add('hiddenimg');
+    imgObtenTransitInfo.classList.add('hiddenimg');
+    imgObtenBicicletasInfo.classList.add('hiddenimg');
+    imgObtenVueloInfo.classList.add('hiddenimg');
+
+    obtenRecompensaInfo.classList.remove('visibility');
+    obtenComidaInfo.classList.remove('visibility');
+    obtenTransporteInfo.classList.remove('visibility');
+    obtenEmpresaInfo.classList.remove('visibility');
+    obtenTransitInfo.classList.remove('visibility');
+    obtenBicicletasInfo.classList.remove('visibility');
+    obtenVueloInfo.classList.remove('visibility');
+
+    imgObtenRecompensaInfo.classList.remove('visibilityimg');
+    imgObtenComidaInfo.classList.remove('visibilityimg');
+    imgObtenTransporteInfo.classList.remove('visibilityimg');
+    imgObtenEmpresaInfo.classList.remove('visibilityimg');
+    imgObtenTransitInfo.classList.remove('visibilityimg');
+    imgObtenBicicletasInfo.classList.remove('visibilityimg');
+    imgObtenVueloInfo.classList.remove('visibilityimg');
+    
+    obtenViajeInfo.classList.add('visibility');
+    imgObtenViajeInfo.classList.add('visibilityimg');
+  })
+}
+if(pideComida){
+  pideComida.addEventListener('click',(e)=>{
+    obtenRecompensaInfo.classList.add('hidden');
+    obtenViajeInfo.classList.add('hidden');
+    obtenTransporteInfo.classList.add('hidden');
+    obtenEmpresaInfo.classList.add('hidden');
+    obtenTransitInfo.classList.add('hidden');
+    obtenBicicletasInfo.classList.add('hidden');
+    obtenVueloInfo.classList.add('hidden');
+
+    imgObtenRecompensaInfo.classList.add('hiddenimg');
+    imgObtenTransporteInfo.classList.add('hiddenimg');
+    imgObtenEmpresaInfo.classList.add('hiddenimg');
+    imgObtenTransitInfo.classList.add('hiddenimg');
+    imgObtenBicicletasInfo.classList.add('hiddenimg');
+    imgObtenVueloInfo.classList.add('hiddenimg');
+
+    obtenRecompensaInfo.classList.remove('visibility');
+    obtenTransporteInfo.classList.remove('visibility');
+    obtenEmpresaInfo.classList.remove('visibility');
+    obtenTransitInfo.classList.remove('visibility');
+    obtenBicicletasInfo.classList.remove('visibility');
+    obtenVueloInfo.classList.remove('visibility');
+
+    imgObtenRecompensaInfo.classList.remove('visibilityimg');
+    imgObtenTransporteInfo.classList.remove('visibilityimg');
+    imgObtenEmpresaInfo.classList.remove('visibilityimg');
+    imgObtenTransitInfo.classList.remove('visibilityimg');
+    imgObtenBicicletasInfo.classList.remove('visibilityimg');
+    imgObtenVueloInfo.classList.remove('visibilityimg');
+
+
+    obtenComidaInfo.classList.add('visibility');
+    imgObtenComidaInfo.classList.add('visibilityimg');
+  })
+}
+if(transporta){
+  transporta.addEventListener('click',(e)=>{
+    obtenRecompensaInfo.classList.add('hidden');
+    obtenComidaInfo.classList.add('hidden');
+    obtenEmpresaInfo.classList.add('hidden');
+    obtenTransitInfo.classList.add('hidden');
+    obtenBicicletasInfo.classList.add('hidden');
+    obtenVueloInfo.classList.add('hidden');
+
+    imgObtenRecompensaInfo.classList.add('hiddenimg');
+    imgObtenComidaInfo.classList.add('hiddenimg');
+    imgObtenEmpresaInfo.classList.add('hiddenimg');
+    imgObtenTransitInfo.classList.add('hiddenimg');
+    imgObtenBicicletasInfo.classList.add('hiddenimg');
+    imgObtenVueloInfo.classList.add('hiddenimg');
+
+    obtenRecompensaInfo.classList.remove('visibility');
+    obtenComidaInfo.classList.remove('visibility');
+    obtenEmpresaInfo.classList.remove('visibility');
+    obtenTransitInfo.classList.remove('visibility');
+    obtenBicicletasInfo.classList.remove('visibility');
+    obtenVueloInfo.classList.remove('visibility');
+
+    imgObtenRecompensaInfo.classList.remove('visibilityimg');
+    imgObtenComidaInfo.classList.remove('visibilityimg');
+    imgObtenEmpresaInfo.classList.remove('visibilityimg');
+    imgObtenTransitInfo.classList.remove('visibilityimg');
+    imgObtenBicicletasInfo.classList.remove('visibilityimg');
+    imgObtenVueloInfo.classList.remove('visibilityimg');
+
+
+    obtenTransporteInfo.classList.add('visibility');
+    imgobtenTransporteInfo.classList.add('visibilityimg');
+  })
+}
+if(empresas){
+  empresas.addEventListener('click',(e)=>{
+
+    obtenRecompensaInfo.classList.add('hidden');
+    obtenTransporteInfo.classList.add('hidden');
+    obtenComidaInfo.classList.add('hidden');
+    obtenTransitInfo.classList.add('hidden');
+    obtenBicicletasInfo.classList.add('hidden');
+    obtenVueloInfo.classList.add('hidden');
+
+    imgObtenRecompensaInfo.classList.add('hiddenimg');
+    imgObtenTransporteInfo.classList.add('hiddenimg');
+    imgObtenComidaInfo.classList.add('hiddenimg');
+    imgObtenTransitInfo.classList.add('hiddenimg');
+    imgObtenBicicletasInfo.classList.add('hiddenimg');
+    imgObtenVueloInfo.classList.add('hiddenimg');
+
+    obtenRecompensaInfo.classList.remove('visibility');
+    obtenComidaInfo.classList.remove('visibility');
+    obtenEmpresaInfo.classList.remove('visibility');
+    obtenTransitInfo.classList.remove('visibility');
+    obtenBicicletasInfo.classList.remove('visibility');
+    obtenVueloInfo.classList.remove('visibility');
+
+    imgObtenRecompensaInfo.classList.remove('visibilityimg');
+    imgObtenComidaInfo.classList.remove('visibilityimg');
+    imgObtenEmpresaInfo.classList.remove('visibilityimg');
+    imgObtenTransitInfo.classList.remove('visibilityimg');
+    imgObtenBicicletasInfo.classList.remove('visibilityimg');
+    imgObtenVueloInfo.classList.remove('visibilityimg');
+
+
+    obtenEmpresaInfo.classList.add('visibility');
+    imgObtenEmpresaInfo.classList.add('visibilityimg');
+  })
+}
+if(transit){
+  transit.addEventListener('click',(e)=>{
+
+    obtenRecompensaInfo.classList.add('hidden');
+    obtenTransporteInfo.classList.add('hidden');
+    obtenComidaInfo.classList.add('hidden');
+    obtenEmpresaInfo.classList.add('hidden');
+    obtenBicicletasInfo.classList.add('hidden');
+    obtenVueloInfo.classList.add('hidden');
+
+    imgObtenRecompensaInfo.classList.add('hiddenimg');
+    imgObtenTransporteInfo.classList.add('hiddenimg');
+    imgObtenComidaInfo.classList.add('hiddenimg');
+    imgObtenEmpresaInfo.classList.add('hiddenimg');
+    imgObtenBicicletasInfo.classList.add('hiddenimg');
+    imgObtenVueloInfo.classList.add('hiddenimg');
+
+    obtenRecompensaInfo.classList.remove('visibility');
+    obtenComidaInfo.classList.remove('visibility');
+    obtenEmpresaInfo.classList.remove('visibility');
+    obtenEmpresaInfo.classList.remove('visibility');
+    obtenBicicletasInfo.classList.remove('visibility');
+    obtenVueloInfo.classList.remove('visibility');
+
+    imgObtenRecompensaInfo.classList.remove('visibilityimg');
+    imgObtenComidaInfo.classList.remove('visibilityimg');
+    imgObtenEmpresaInfo.classList.remove('visibilityimg');
+    imgObtenEmpresaInfo.classList.remove('visibilityimg');
+    imgObtenBicicletasInfo.classList.remove('visibilityimg');
+    imgObtenVueloInfo.classList.remove('visibilityimg');
+
+
+    obtenTransitInfo.classList.add('visibility');
+    imgObtenTransitInfo.classList.add('visibilityimg');
+  })
+}
+if(Bicicletas){
+  Bicicletas.addEventListener('click',(e)=>{
+
+    obtenRecompensaInfo.classList.add('hidden');
+    obtenTransporteInfo.classList.add('hidden');
+    obtenComidaInfo.classList.add('hidden');
+    obtenEmpresaInfo.classList.add('hidden');
+    obtenTransitInfo.classList.add('hidden');
+    obtenVueloInfo.classList.add('hidden');
+
+    imgObtenRecompensaInfo.classList.add('hiddenimg');
+    imgObtenTransporteInfo.classList.add('hiddenimg');
+    imgObtenComidaInfo.classList.add('hiddenimg');
+    imgObtenEmpresaInfo.classList.add('hiddenimg');
+    imgObtenTransitInfo.classList.add('hiddenimg');
+    imgObtenVueloInfo.classList.add('hiddenimg');
+
+    obtenRecompensaInfo.classList.remove('visibility');
+    obtenComidaInfo.classList.remove('visibility');
+    obtenEmpresaInfo.classList.remove('visibility');
+    obtenEmpresaInfo.classList.remove('visibility');
+    obtenTransitInfo.classList.remove('visibility');
+    obtenVueloInfo.classList.remove('visibility');
+
+    imgObtenRecompensaInfo.classList.remove('visibilityimg');
+    imgObtenComidaInfo.classList.remove('visibilityimg');
+    imgObtenEmpresaInfo.classList.remove('visibilityimg');
+    imgObtenEmpresaInfo.classList.remove('visibilityimg');
+    imgObtenTransitInfo.classList.remove('visibilityimg');
+    imgObtenVueloInfo.classList.remove('visibilityimg');
+
+
+    obtenBicicletasInfo.classList.add('visibility');
+    imgObtenBicicletasInfo.classList.add('visibilityimg');
+  })
+}
+if(uberElevate){
+  uberElevate.addEventListener('click',(e)=>{
+
+    obtenRecompensaInfo.classList.add('hidden');
+    obtenTransporteInfo.classList.add('hidden');
+    obtenComidaInfo.classList.add('hidden');
+    obtenEmpresaInfo.classList.add('hidden');
+    obtenTransitInfo.classList.add('hidden');
+    obtenBicicletasInfo.classList.add('hidden');
+
+    imgObtenRecompensaInfo.classList.add('hiddenimg');
+    imgObtenTransporteInfo.classList.add('hiddenimg');
+    imgObtenComidaInfo.classList.add('hiddenimg');
+    imgObtenEmpresaInfo.classList.add('hiddenimg');
+    imgObtenTransitInfo.classList.add('hiddenimg');
+    imgObtenBicicletasInfo.classList.add('hiddenimg');
+
+    obtenRecompensaInfo.classList.remove('visibility');
+    obtenComidaInfo.classList.remove('visibility');
+    obtenEmpresaInfo.classList.remove('visibility');
+    obtenEmpresaInfo.classList.remove('visibility');
+    obtenTransitInfo.classList.remove('visibility');
+    obtenBicicletasInfo.classList.remove('visibility');
+
+    imgObtenRecompensaInfo.classList.remove('visibilityimg');
+    imgObtenComidaInfo.classList.remove('visibilityimg');
+    imgObtenEmpresaInfo.classList.remove('visibilityimg');
+    imgObtenEmpresaInfo.classList.remove('visibilityimg');
+    imgObtenTransitInfo.classList.remove('visibilityimg');
+    imgObtenBicicletasInfo.classList.remove('visibilityimg');
+
+
+    obtenVueloInfo.classList.add('visibility');
+    imgObtenVueloInfo.classList.add('visibilityimg');
+  })
+}
+
+
+
+

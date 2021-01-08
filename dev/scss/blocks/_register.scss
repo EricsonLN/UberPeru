@@ -1,6 +1,13 @@
 .main-register{
     display: flex;justify-content: space-between;
     font-family: $main-font;
+
+    @include tablet{
+        flex-wrap: wrap;
+        }
+        @include mobile{
+        flex-wrap: wrap;
+        }
     
     &__items{
         display: flex;

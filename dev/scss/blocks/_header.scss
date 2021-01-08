@@ -40,7 +40,7 @@
             z-index: 300;
             background: $color-white;
             &.main-nav__show{
-                height: 100vh;
+                height: 200vh;
                 transform: translateY(0);
                 display: block;
             }
@@ -112,9 +112,9 @@
                     padding: 0 ;
                     box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 16px;
                     transform: translateY(-200%);
-                    transition-timing-function: cubic-bezier(0.2, 0.8, 0.4, 1);
-                    transition-property: opacity, transform;
-                    transition-duration: 0.5s;
+                    // transition-timing-function: cubic-bezier(0.2, 0.8, 0.4, 1);
+                    // transition-property: opacity, transform;
+                    // transition-duration: 0.5s;
                     z-index: -10;
                     
                     

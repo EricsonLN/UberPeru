@@ -5,22 +5,53 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
     font-family: $main-font;
-
+    & .main-footer__title,.main-footer__link {
+        @include tablet{
+            margin-left: 3rem;
+            
+        }
+    }
     & .navegacion-footer{
         display: flex;
         justify-content: space-between;
+        @include tablet{
+            flex-wrap: wrap;
+            }
+            @include mobile{
+            flex-wrap: wrap;
+            }
         & h1{
             font-size: 3rem;
         }
         & li{
             padding: 1rem 0 1rem 0;
         }
+        & .nav{
+        @include tablet{
+            width: 100%;
+        }
+        @include mobile{
+            width: 100%;
+        }
+    }
+        
     }
     
 }
 .main.infoextra{
     display: flex;
     justify-content: space-between; 
+
+    
+    @include tablet{
+        flex-wrap: wrap;
+    }
+    @include mobile{
+            flex-wrap: wrap;
+    }
+
+
+        
 }
 .main-infoextra__items-rs{
     display: flex;
@@ -39,6 +70,12 @@
 }
 .main-infoextra__items-il{
     display: flex;
+    @include tablet{
+        flex-wrap: wrap;
+    }
+    @include mobile{
+            flex-wrap: wrap;
+    }
 }
 .idiomas-lenguaje{
     cursor: pointer;
@@ -48,6 +85,14 @@
     transition-property: background;
     transition-timing-function: cubic-bezier(0, 0, 1, 1);
     align-items: center;
+    @include tablet{
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    @include mobile{
+        flex-wrap: wrap;
+        width: 100%;
+    }
     
     &:hover{
         background-color: rgb(51, 51, 51);
@@ -61,6 +106,14 @@
     justify-content: space-between;
     align-items: center;
     padding-top: 2rem;
+    @include tablet{
+        flex-wrap: wrap;
+        
+    }
+    @include mobile{
+        flex-wrap: wrap;
+        
+    }
     & a{
         color: rgb(175, 175, 175);
         font-size: 12px;
@@ -71,5 +124,6 @@
     display: flex;
     &__items{
         padding: 0 1rem 0 1rem;
+        
     }
 }
